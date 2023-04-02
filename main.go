@@ -20,7 +20,7 @@ var (
 )
 
 func init() {
-	config, err := initializers.LoadConfig(".")
+	config, err := initializers.LoadFromEnv()
 	if err != nil {
 		log.Fatal("? Could not load environment variables", err)
 	}

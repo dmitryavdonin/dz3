@@ -7,15 +7,10 @@ metadata:
       env: dev
       owner: DmitryAvdonin
 spec:
-   replicas: 2
+   replicas: 1
    selector:
       matchLabels:
          project: adv
-   strategy:
-      type: RollingUpdate
-      rollingUpdate:
-         maxUnavailable: 1
-         maxSurge: 1
    template:
       metadata:
          labels:
@@ -23,6 +18,9 @@ spec:
       spec:
          containers:
             - name: user-service
-              image: dmitryavdonin/user_service:latest
+              image: dmitryavdonin/user_service_debug:latest
+              envFrom:
+                 - secretRef:
+                      name: postgres-secret
               ports:
                  - containerPort: 8000

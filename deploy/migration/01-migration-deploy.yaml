@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-   name: user-service-deploy
+   name: migration-deploy
    labels:
-      app: user-service
+      app: migration
       env: dev
       owner: DmitryAvdonin
 spec:
@@ -17,10 +17,8 @@ spec:
             project: adv
       spec:
          containers:
-            - name: user-service
-              image: dmitryavdonin/user_service_debug:latest
+            - name: migration
+              image: dmitryavdonin/migrate:latest
               envFrom:
                  - secretRef:
                       name: postgres-secret
-              ports:
-                 - containerPort: 8000

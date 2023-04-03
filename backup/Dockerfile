@@ -11,7 +11,7 @@ COPY routes ./routes/
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o user_service .
 
 
-FROM scratch
+FROM golang:1.18-alpine
 COPY --from=builder /app/user_service /usr/bin/
 EXPOSE 8000
 CMD ["/usr/bin/user_service"]

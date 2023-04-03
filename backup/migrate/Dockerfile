@@ -9,6 +9,6 @@ COPY models ./models/
 COPY migrate ./migrate/
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o migrate ./migrate/migrate.go
 
-FROM scratch
+FROM golang:1.18-alpine
 COPY --from=builder /app/migrate /usr/bin/
 CMD ["/usr/bin/migrate"]

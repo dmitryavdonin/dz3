@@ -1,0 +1,1 @@
+kubectl apply -f 01-migration-deploy.yaml

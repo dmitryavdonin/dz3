@@ -1,1 +1,1 @@
-kubectl apply -f 01-migration-deploy.yaml
+kubectl apply -f migration-job.yaml

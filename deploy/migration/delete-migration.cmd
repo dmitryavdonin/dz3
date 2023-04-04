@@ -1,1 +1,1 @@
-kubectl delete -f 01-migration-deploy.yaml
+kubectl delete -f migration-job.yaml

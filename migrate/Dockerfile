@@ -11,4 +11,3 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o migrate ./migrate
 
 FROM scratch
 COPY --from=builder /app/migrate /usr/bin/
-CMD ["/usr/bin/migrate"]

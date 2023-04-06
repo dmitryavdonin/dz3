@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim                   # Create a PersistentVolumeClaim t
 metadata:                                     # Claim name and labels
   name: postgres-pv-claim
   labels:
-    app: fullstack-postgres
+    app: {{ .Release.Name }}
 spec:                                         # Access mode and resource limits
   storageClassName: manual                    # Request a certain storage class
   accessModes:

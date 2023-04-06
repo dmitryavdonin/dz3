@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "71b4b23d-9159-4d1d-86ba-9a0ba0fb5d5f",
+		"name": "dz3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "795865"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"adv\",\r\n    \"firstname\": \"Dmitry\",\r\n    \"lastname\": \"Avdonin\",\r\n    \"email\": \"adv@mail.ru\",\r\n    \"phone\": \"11234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "arch.homework/user",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/user/1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"2adv\",\r\n    \"firstname\": \"2Dmitry\",\r\n    \"lastname\": \"2Avdonin\",\r\n    \"email\": \"2new_adv@mail.ru\",\r\n    \"phone\": \"20001234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "arch.homework/user/1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/user/1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/user/",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/healthcheck",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

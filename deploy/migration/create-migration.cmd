@@ -1,1 +1,0 @@
-kubectl apply -f migration-job.yaml

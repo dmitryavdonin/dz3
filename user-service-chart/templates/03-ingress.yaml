@@ -18,13 +18,13 @@ spec:
                 pathType: Prefix
                 backend:
                    service:
-                      name: my-user-service
+                      name: {{ .Release.Name }}-srv
                       port: 
-                         number: 8000
+                         number: {{ .Values.container.port }}
               - path: /healthcheck
                 pathType: Prefix
                 backend:
                    service:
-                      name: my-user-service
+                      name: {{ .Release.Name }}-srv
                       port: 
-                         number: 8000
+                         number: {{ .Values.container.port }}

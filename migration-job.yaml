@@ -13,4 +13,4 @@ spec:
                    name: postgres-secret
            command: ["/usr/bin/migrate"]       
       restartPolicy: Never
-  backoffLimit: 1
+  backoffLimit: 4
